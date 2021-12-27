@@ -10,8 +10,17 @@ import UIKit
 class ThirdTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Альбомы"
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemGray6
+        let rightButtonItem = UIBarButtonItem.init(
+              title: "Title",
+              style: .done,
+              target: self,
+              action: Selector(("rightButtonAction:"))
+        )
+
+        self.navigationItem.rightBarButtonItem = rightButtonItem
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -19,5 +28,9 @@ class ThirdTabViewController: UIViewController {
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    @objc func rightButtonAction(sender: UIBarButtonItem) {
+        print("ddddd")
     }
 }

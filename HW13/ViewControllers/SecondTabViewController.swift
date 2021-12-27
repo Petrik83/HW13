@@ -10,7 +10,9 @@ import UIKit
 class SecondTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Для Вас"
+        navigationController?.navigationBar.prefersLargeTitles = true
+
         view.backgroundColor = .systemGray6
     }
     
