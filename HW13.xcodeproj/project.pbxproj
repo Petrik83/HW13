@@ -43,17 +43,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6D77602427797AFD00F605C9 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				6D77602227797AE300F605C9 /* FirstTabViewController.swift */,
-				6D77602527797BB700F605C9 /* SecondTabViewController.swift */,
-				6D77602727797BF900F605C9 /* ThirdTabViewController.swift */,
-				6D77602927797C2400F605C9 /* FourthTabViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		6DB9101A27725EE800B5C47B = {
 			isa = PBXGroup;
 			children = (
@@ -73,15 +62,74 @@
 		6DB9102527725EE800B5C47B /* HW13 */ = {
 			isa = PBXGroup;
 			children = (
-				6D77602427797AFD00F605C9 /* ViewControllers */,
-				6DB9102627725EE800B5C47B /* AppDelegate.swift */,
-				6DB9102A27725EE800B5C47B /* ViewController.swift */,
-				6DB9102C27725EE800B5C47B /* Main.storyboard */,
-				6DB9102F27725EE900B5C47B /* Assets.xcassets */,
-				6DB9103127725EE900B5C47B /* LaunchScreen.storyboard */,
-				6DB9103427725EE900B5C47B /* Info.plist */,
+				6DE39F9E2788EE6A00C6B370 /* Resurses */,
+				6DE39FA12788EF5500C6B370 /* Sourses */,
 			);
 			path = HW13;
+			sourceTree = "<group>";
+		};
+		6DE39F9E2788EE6A00C6B370 /* Resurses */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9102F27725EE900B5C47B /* Assets.xcassets */,
+				6DE39F9F2788EE8C00C6B370 /* Configs */,
+				6DE39FA02788EE9B00C6B370 /* Storyboards */,
+			);
+			path = Resurses;
+			sourceTree = "<group>";
+		};
+		6DE39F9F2788EE8C00C6B370 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9103427725EE900B5C47B /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		6DE39FA02788EE9B00C6B370 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9102C27725EE800B5C47B /* Main.storyboard */,
+				6DB9103127725EE900B5C47B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6DE39FA12788EF5500C6B370 /* Sourses */ = {
+			isa = PBXGroup;
+			children = (
+				6DE39FA42788EF9100C6B370 /* App */,
+				6DE39FA32788EF8400C6B370 /* Scenes */,
+				6DE39FA22788EF7800C6B370 /* Models */,
+			);
+			path = Sourses;
+			sourceTree = "<group>";
+		};
+		6DE39FA22788EF7800C6B370 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6DE39FA32788EF8400C6B370 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6D77602227797AE300F605C9 /* FirstTabViewController.swift */,
+				6D77602527797BB700F605C9 /* SecondTabViewController.swift */,
+				6D77602727797BF900F605C9 /* ThirdTabViewController.swift */,
+				6D77602927797C2400F605C9 /* FourthTabViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6DE39FA42788EF9100C6B370 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9102627725EE800B5C47B /* AppDelegate.swift */,
+				6DB9102A27725EE800B5C47B /* ViewController.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZB4T6SD8SN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW13/Info.plist;
+				INFOPLIST_FILE = HW13/Resurses/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +387,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZB4T6SD8SN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW13/Info.plist;
+				INFOPLIST_FILE = HW13/Resurses/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
