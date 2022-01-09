@@ -25,6 +25,7 @@ class ThirdTabViewController: UIViewController, UICollectionViewDelegate {
               action: #selector(leftButtonAction)
         )
         self.navigationItem.leftBarButtonItem = leftButtonItem
+        
         setupCollectionView()
     }
     
@@ -33,7 +34,7 @@ class ThirdTabViewController: UIViewController, UICollectionViewDelegate {
     }
     
     func setupCollectionView() {
-        collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: setupCompositionLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: setupCompositionLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.register(VerticalSectionCell.self, forCellWithReuseIdentifier: VerticalSectionCell.reuseId)
         collectionView.delegate = self
@@ -68,8 +69,11 @@ extension ThirdTabViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalSectionCell.reuseId, for: indexPath) as! VerticalSectionCell
-        cell.backgroundColor = .red
+        cell.icon.image = data[indexPath.section].options[indexPath.row].icon
+        cell.title.text = data[indexPath.section].options[indexPath.row].title
+        cell.subTitle.text = data[indexPath.section].options[indexPath.row].detailTextLabel
         return cell
     }
 }

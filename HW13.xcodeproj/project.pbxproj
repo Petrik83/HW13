@@ -19,6 +19,7 @@
 		6DE39FA62788F14000C6B370 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE39FA52788F14000C6B370 /* Model.swift */; };
 		6DE39FAC278983C000C6B370 /* SetupSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE39FAB278983C000C6B370 /* SetupSections.swift */; };
 		6DE39FAE2789841400C6B370 /* VerticalSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE39FAD2789841400C6B370 /* VerticalSectionCell.swift */; };
+		6DE39FB2278B289400C6B370 /* HorizontalSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE39FB1278B289400C6B370 /* HorizontalSectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6DE39FA52788F14000C6B370 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6DE39FAB278983C000C6B370 /* SetupSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupSections.swift; sourceTree = "<group>"; };
 		6DE39FAD2789841400C6B370 /* VerticalSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSectionCell.swift; sourceTree = "<group>"; };
+		6DE39FB1278B289400C6B370 /* HorizontalSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				6D77602727797BF900F605C9 /* ThirdTabViewController.swift */,
 				6DE39FAD2789841400C6B370 /* VerticalSectionCell.swift */,
+				6DE39FB1278B289400C6B370 /* HorizontalSectionCell.swift */,
 				6DE39FAB278983C000C6B370 /* SetupSections.swift */,
 			);
 			path = ThirdTabViewController;
@@ -253,6 +256,7 @@
 				6D77602627797BB700F605C9 /* SecondTabViewController.swift in Sources */,
 				6DB9102727725EE800B5C47B /* AppDelegate.swift in Sources */,
 				6DE39FAC278983C000C6B370 /* SetupSections.swift in Sources */,
+				6DE39FB2278B289400C6B370 /* HorizontalSectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

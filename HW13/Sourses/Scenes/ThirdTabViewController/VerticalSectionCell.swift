@@ -21,7 +21,8 @@ class VerticalSectionCell: UICollectionViewCell {
         viewHierarchy()
         setupLayout()
         
-        icon.image = UIImage(named: "Видео")
+//        icon.image = UIImage(named: "Видео")
+        icon.clipsToBounds = true
         icon.contentMode = .center
         accessoryIcon.image = UIImage(named: "chevron")?.withTintColor(.systemGray)
         title.text = "Видео"
