@@ -21,22 +21,17 @@ class VerticalSectionCell: UICollectionViewCell {
         viewHierarchy()
         setupLayout()
         
-//        icon.image = UIImage(named: "Видео")
         icon.clipsToBounds = true
         icon.contentMode = .center
         accessoryIcon.image = UIImage(named: "chevron")?.withTintColor(.systemGray)
-        title.text = "Видео"
         title.textColor = UIColor.systemBlue
         title.font = UIFont.systemFont(ofSize: 22)
-
-        subTitle.text = "1 000"
         subTitle.textColor = UIColor.systemGray
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     private func viewHierarchy() {
         addSubview(icon)

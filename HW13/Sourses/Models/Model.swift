@@ -34,9 +34,9 @@ extension Section {
         return [
             Section(type: .twoRollHorizontalView, title: "Мои альбомы", options: [
                 Item(icon: UIImage(named: "image0"), title: "Недавние", detailTextLabel: "1 432"),
-                Item(icon: UIImage(named: "image1"), title: "Instagram", detailTextLabel: "104"),
+                Item(icon: UIImage(named: "image1"), title: "Избранное", detailTextLabel: "104"),
                 Item(icon: UIImage(named: "image2"), title: "xiaoyi", detailTextLabel: "14"),
-                Item(icon: UIImage(named: "image3"), title: "Избранное", detailTextLabel: "115"),
+                Item(icon: UIImage(named: "image3"), title: "Instagram", detailTextLabel: "115"),
                 Item(icon: UIImage(named: "image4"), title: "WhatsApp", detailTextLabel: "45"),
                 Item(icon: UIImage(named: "image5"), title: "Dropbox", detailTextLabel: "4")
             ]),
