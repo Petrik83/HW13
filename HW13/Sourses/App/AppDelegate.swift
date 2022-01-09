@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         
         let firstTabViewController = FirstTabViewController()
+        let firstNavigationController = UINavigationController(rootViewController: firstTabViewController)
         firstTabViewController.tabBarItem = UITabBarItem(title: "Медиатека", image: UIImage(named: "photo"), tag: 0)
         
         let secondTabViewController = SecondTabViewController()
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fourthTabViewController = FourthTabViewController()
         let fourthNavigationController = UINavigationController(rootViewController: fourthTabViewController)
         fourthTabViewController.tabBarItem = UITabBarItem(title: "Поиск", image: UIImage(named: "custom.magnifyin"), tag: 3)
-        tabBarController.setViewControllers([firstTabViewController,
+        tabBarController.setViewControllers([firstNavigationController,
                                              secondNavigationController,
                                              thirdNavigationController,
                                              fourthNavigationController], animated: true)

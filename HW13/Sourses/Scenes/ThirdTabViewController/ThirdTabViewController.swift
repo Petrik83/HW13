@@ -1,0 +1,75 @@
+//
+//  ThirdTabViewController.swift
+//  HW13
+//
+//  Created by Александр Петрович on 27.12.2021.
+//
+
+import UIKit
+
+class ThirdTabViewController: UIViewController, UICollectionViewDelegate {
+    
+    let data = Section.getData()
+    var collectionView: UICollectionView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Альбомы"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        view.backgroundColor = .systemGray6
+        
+        let leftButtonItem = UIBarButtonItem.init(
+              image: UIImage(systemName: "plus"),
+              style: .done,
+              target: self,
+              action: #selector(leftButtonAction)
+        )
+        self.navigationItem.leftBarButtonItem = leftButtonItem
+        setupCollectionView()
+    }
+    
+    @objc func leftButtonAction(sender: UIBarButtonItem) {
+        print("add button pressed")
+    }
+    
+    func setupCollectionView() {
+        collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: setupCompositionLayout())
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.register(VerticalSectionCell.self, forCellWithReuseIdentifier: VerticalSectionCell.reuseId)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = UIColor.systemGray6
+        view.addSubview(collectionView)
+    }
+    
+    func setupCompositionLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout  { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
+            let section = self.data[sectionIndex]
+            switch section.type {
+                
+            default:
+                return setupVerticalViewSection()
+            }
+        }
+        return layout
+    }
+    
+}
+
+extension ThirdTabViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return data.count
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data[section].options.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalSectionCell.reuseId, for: indexPath) as! VerticalSectionCell
+        cell.backgroundColor = .red
+        return cell
+    }
+}
