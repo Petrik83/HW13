@@ -95,8 +95,10 @@ extension ThirdTabViewController: UICollectionViewDataSource {
             cell.title.text = data[indexPath.section].options[indexPath.row].title
             cell.subTitle.text = data[indexPath.section].options[indexPath.row].detailTextLabel
             
-            if indexPath.row == data[indexPath.section].options.count - 1 {
+            if indexPath.row == (data[indexPath.section].options.count - 1) {
                 cell.line.backgroundColor = UIColor.clear
+            } else {
+                cell.line.backgroundColor = UIColor.systemGray3
             }
             return cell
         
@@ -114,8 +116,8 @@ extension ThirdTabViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        print("Нажата \(data[indexPath.section].options[indexPath.row].title)")
 //        let cell = collectionView.cellForItem(at: indexPath)
-//        cell?.isSelected = true
-//        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
+
             }
 }
