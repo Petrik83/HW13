@@ -17,6 +17,16 @@ class VerticalSectionCell: UICollectionViewCell {
     let accessoryIcon = UIImageView()
     let line = UILabel()
     
+    override var isHighlighted: Bool {
+            didSet {
+                if self.isHighlighted {
+                    backgroundColor = UIColor.systemGray3
+                } else {
+                    backgroundColor = UIColor.systemGray6
+                }
+            }
+        }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewHierarchy()
@@ -69,7 +79,7 @@ class VerticalSectionCell: UICollectionViewCell {
         line.translatesAutoresizingMaskIntoConstraints = false
         line.leadingAnchor.constraint(equalTo: icon.trailingAnchor).isActive = true
         line.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        line.topAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        line.topAnchor.constraint(equalTo: bottomAnchor, constant: -1).isActive = true
         line.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
 }

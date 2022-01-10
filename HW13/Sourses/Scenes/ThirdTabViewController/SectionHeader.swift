@@ -35,7 +35,7 @@ class SectionHeader: UICollectionReusableView {
 
 
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20).isActive = true
         title.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }

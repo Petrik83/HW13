@@ -50,13 +50,13 @@ func setupTwoRollHorizontalViewSection() -> NSCollectionLayoutSection {
     
     
     
-    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.48),
+    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.47),
                                            heightDimension: .fractionalWidth(1.1))
     let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 2)
-    group.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 10, bottom: 8, trailing: 0)
+    group.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 8, trailing: 0)
     let section = NSCollectionLayoutSection(group: group)
     section.orthogonalScrollingBehavior = .continuous
-    section.contentInsets = NSDirectionalEdgeInsets.init(top: 30, leading: 0, bottom: 10, trailing: 0)
+    section.contentInsets = NSDirectionalEdgeInsets.init(top: 30, leading: 10, bottom: 10, trailing: 0)
     
     let header = createSectionsHeader()
     section.boundarySupplementaryItems = [header]
