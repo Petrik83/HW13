@@ -15,18 +15,21 @@ class VerticalSectionCell: UICollectionViewCell {
     let title = UILabel()
     let subTitle = UILabel()
     let accessoryIcon = UIImageView()
+    let line = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewHierarchy()
         setupLayout()
         
-        icon.clipsToBounds = true
-        icon.contentMode = .center
+        icon.contentMode = .scaleAspectFit
         accessoryIcon.image = UIImage(named: "chevron")?.withTintColor(.systemGray)
         title.textColor = UIColor.systemBlue
         title.font = UIFont.systemFont(ofSize: 22)
         subTitle.textColor = UIColor.systemGray
+        line.backgroundColor = UIColor.systemGray3
+
+        
     }
     
     required init?(coder: NSCoder) {
@@ -38,6 +41,7 @@ class VerticalSectionCell: UICollectionViewCell {
         addSubview(title)
         addSubview(subTitle)
         addSubview(accessoryIcon)
+        addSubview(line)
     }
     
     private func setupLayout() {
@@ -45,11 +49,11 @@ class VerticalSectionCell: UICollectionViewCell {
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         icon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        icon.widthAnchor.constraint(equalToConstant: 48).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        icon.widthAnchor.constraint(equalToConstant: 38).isActive = true
+        icon.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         accessoryIcon.translatesAutoresizingMaskIntoConstraints = false
-        accessoryIcon.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        accessoryIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
         accessoryIcon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         accessoryIcon.widthAnchor.constraint(equalToConstant: 9).isActive = true
         accessoryIcon.heightAnchor.constraint(equalToConstant: 14).isActive = true
@@ -61,5 +65,11 @@ class VerticalSectionCell: UICollectionViewCell {
         subTitle.translatesAutoresizingMaskIntoConstraints = false
         subTitle.trailingAnchor.constraint(equalTo: accessoryIcon.leadingAnchor, constant: -10).isActive = true
         subTitle.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        line.translatesAutoresizingMaskIntoConstraints = false
+        line.leadingAnchor.constraint(equalTo: icon.trailingAnchor).isActive = true
+        line.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        line.topAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
 }
