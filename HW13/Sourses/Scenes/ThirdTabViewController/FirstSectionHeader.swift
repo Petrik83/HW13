@@ -1,19 +1,28 @@
 //
-//  SectionHeader.swift
+//  FirstSectionHeader.swift
 //  HW13
 //
-//  Created by Александр Петрович on 09.01.2022.
+//  Created by Александр Петрович on 10.01.2022.
 //
 
 import UIKit
 
-class SectionHeader: UICollectionReusableView {
+class FirstSectionHeader: UICollectionReusableView {
     
-    static let reuseId = "SectionHeader"
+    static let reuseId = "FirstSectionHeader"
     
     let title = UILabel()
     let line = UILabel()
-     
+    
+    lazy var button: UIButton = {
+        var button = UIButton()
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.backgroundColor = UIColor.clear
+        button.isEnabled = true
+        button.setTitle("Все", for: .normal)
+        return button
+    }()
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewHierarchy()
@@ -24,6 +33,7 @@ class SectionHeader: UICollectionReusableView {
     private func viewHierarchy() {
         addSubview(line)
         addSubview(title)
+        addSubview(button)
     }
     
     private func setupLayout() {
@@ -38,16 +48,23 @@ class SectionHeader: UICollectionReusableView {
         title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20).isActive = true
         title.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+        button.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 24).isActive = true
     }
     
     private func setupElements() {
         title.textColor = .black
         title.font = UIFont.boldSystemFont(ofSize: 25)
-        
-        line.backgroundColor = UIColor.systemGray3
+        line.backgroundColor = .systemGray3
+
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+
 }
+

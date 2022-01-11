@@ -43,7 +43,7 @@ extension Section {
             Section(type: .oneRollHorizontalView, title: "Общие места", options: [
                 Item(icon: UIImage(named: "image6"), title: "Недавние", detailTextLabel: "1 432"),
                 Item(icon: UIImage(named: "image7"), title: "Instagram", detailTextLabel: "104"),
-                Item(icon: UIImage(named: "image8"), title: "xiaoyi", detailTextLabel: "14"),
+                Item(icon: UIImage(named: "image8"), title: "xiaoymi", detailTextLabel: "14"),
                 Item(icon: UIImage(named: "image9"), title: "Избранное", detailTextLabel: "115")
             ]),
             Section(type: .verticalView, title: "Типы медиафайлов", options: [

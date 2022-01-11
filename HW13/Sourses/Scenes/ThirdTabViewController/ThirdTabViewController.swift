@@ -3,7 +3,7 @@
 //  HW13
 //
 //  Created by Александр Петрович on 27.12.2021.
-//   еще нажатия. see all button
+//  see all button
 import UIKit
 
 class ThirdTabViewController: UIViewController {
@@ -36,11 +36,13 @@ class ThirdTabViewController: UIViewController {
     
     func setupCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: setupCompositionLayout())
+        
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         collectionView.register(VerticalSectionCell.self, forCellWithReuseIdentifier: VerticalSectionCell.reuseId)
         collectionView.register(HorizontalSectionCell.self, forCellWithReuseIdentifier: HorizontalSectionCell.reuseId)
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
+        collectionView.register(FirstSectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: FirstSectionHeader.reuseId)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -105,10 +107,25 @@ extension ThirdTabViewController: UICollectionViewDataSource {
         }
     }
     
+  
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header: SectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as! SectionHeader
-        header.title.text = data[indexPath.section].title
-        return header
+        switch indexPath.section {
+        case 0:
+            let header: FirstSectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FirstSectionHeader.reuseId, for: indexPath) as! FirstSectionHeader
+            header.title.text = data[indexPath.section].title
+            header.button.addTarget(self, action: #selector(BtnPressed), for: .touchUpInside)
+//            addTarget(self, action: #selector(BtnPressed), for: .touchUpInside)
+            return header
+        default:
+            let header: SectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as! SectionHeader
+            header.title.text = data[indexPath.section].title
+            return header
+        }
+        
+    }
+    @objc func BtnPressed(sender: UIButton) {
+        print("Нажата кнопка \"Все\"")
+       
     }
 }
 
@@ -117,7 +134,6 @@ extension ThirdTabViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print("Нажата \(data[indexPath.section].options[indexPath.row].title)")
-//        let cell = collectionView.cellForItem(at: indexPath)
 
             }
 }
