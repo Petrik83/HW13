@@ -78,9 +78,7 @@ class HorizontalSectionCell: UICollectionViewCell {
         icon1.bottomAnchor.constraint(equalTo: icon.bottomAnchor).isActive = true
         icon1.leadingAnchor.constraint(equalTo: icon.leadingAnchor).isActive = true
         icon1.trailingAnchor.constraint(equalTo: icon.trailingAnchor).isActive = true
-        
-
-                
+                   
         title.translatesAutoresizingMaskIntoConstraints = false
         title.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
         title.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true

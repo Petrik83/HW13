@@ -7,15 +7,6 @@
 
 import UIKit
 
-struct Item {
-    
-    let icon: UIImage?
-    let title: String
-    let detailTextLabel: String?
-    
-    
-}
-
 struct Section {
     
     enum SectionType {
@@ -52,7 +43,6 @@ extension Section {
                 Item(icon: UIImage(named: "Портреты"), title: "Портреты", detailTextLabel: "14"),
                 Item(icon: UIImage(named: "Панорамы"), title: "Панорамы", detailTextLabel: "1")
             ])
-            
         ]}
 }
 

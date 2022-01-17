@@ -43,7 +43,6 @@ class FirstSectionHeader: UICollectionReusableView {
         line.topAnchor.constraint(equalTo: topAnchor).isActive = true
         line.heightAnchor.constraint(equalToConstant: 1).isActive = true
 
-
         title.translatesAutoresizingMaskIntoConstraints = false
         title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20).isActive = true
@@ -58,13 +57,10 @@ class FirstSectionHeader: UICollectionReusableView {
         title.textColor = .black
         title.font = UIFont.boldSystemFont(ofSize: 25)
         line.backgroundColor = .systemGray3
-
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-
-}
+ }
 

@@ -38,8 +38,6 @@ class VerticalSectionCell: UICollectionViewCell {
         title.font = UIFont.systemFont(ofSize: 22)
         subTitle.textColor = UIColor.systemGray
         line.backgroundColor = UIColor.systemGray3
-
-        
     }
     
     required init?(coder: NSCoder) {

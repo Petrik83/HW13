@@ -11,8 +11,6 @@ class ThirdTabViewController: UIViewController {
     let data = Section.getData()
     var collectionView: UICollectionView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Альбомы"
@@ -103,37 +101,32 @@ extension ThirdTabViewController: UICollectionViewDataSource {
                 cell.line.backgroundColor = UIColor.systemGray3
             }
             return cell
-        
+            
         }
     }
     
-  
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch indexPath.section {
         case 0:
             let header: FirstSectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FirstSectionHeader.reuseId, for: indexPath) as! FirstSectionHeader
             header.title.text = data[indexPath.section].title
             header.button.addTarget(self, action: #selector(BtnPressed), for: .touchUpInside)
-//            addTarget(self, action: #selector(BtnPressed), for: .touchUpInside)
+            //            addTarget(self, action: #selector(BtnPressed), for: .touchUpInside)
             return header
         default:
             let header: SectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as! SectionHeader
             header.title.text = data[indexPath.section].title
             return header
         }
-        
     }
     @objc func BtnPressed(sender: UIButton) {
         print("Нажата кнопка \"Все\"")
-       
     }
 }
 
 extension ThirdTabViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         print("Нажата \(data[indexPath.section].options[indexPath.row].title)")
-
-            }
+    }
 }
