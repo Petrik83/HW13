@@ -53,11 +53,11 @@ class ThirdTabViewController: UIViewController {
             let section = self.data[sectionIndex]
             switch section.type {
             case .oneRollHorizontalView:
-                return setupHorizontalViewSection()
+                return self.setupHorizontalViewSection()
             case .twoRollHorizontalView:
-                return setupTwoRollHorizontalViewSection()
+                return self.setupTwoRollHorizontalViewSection()
             default:
-                return setupVerticalViewSection()
+                return self.setupVerticalViewSection()
             }
         }
         return layout
