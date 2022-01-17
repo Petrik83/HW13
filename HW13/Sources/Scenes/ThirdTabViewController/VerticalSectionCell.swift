@@ -35,7 +35,7 @@ class VerticalSectionCell: UICollectionViewCell {
         icon.contentMode = .scaleAspectFit
         accessoryIcon.image = UIImage(named: "chevron")?.withTintColor(.systemGray)
         title.textColor = UIColor.systemBlue
-        title.font = UIFont.systemFont(ofSize: 22)
+        title.font = UIFont.systemFont(ofSize: VerticalSectionCellMetric.titleFontSize)
         subTitle.textColor = UIColor.systemGray
         line.backgroundColor = UIColor.systemGray3
     }
@@ -57,27 +57,46 @@ class VerticalSectionCell: UICollectionViewCell {
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         icon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        icon.widthAnchor.constraint(equalToConstant: 38).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        icon.widthAnchor.constraint(equalToConstant: VerticalSectionCellMetric.iconWidthAnchorConstant).isActive = true
+        icon.heightAnchor.constraint(equalToConstant: VerticalSectionCellMetric.iconHeightAnchorConstant).isActive = true
         
         accessoryIcon.translatesAutoresizingMaskIntoConstraints = false
-        accessoryIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+        accessoryIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: VerticalSectionCellMetric.accessoryIconTrailingAnchorConstant).isActive = true
         accessoryIcon.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        accessoryIcon.widthAnchor.constraint(equalToConstant: 9).isActive = true
-        accessoryIcon.heightAnchor.constraint(equalToConstant: 14).isActive = true
+        accessoryIcon.widthAnchor.constraint(equalToConstant: VerticalSectionCellMetric.accessoryIconWidthAnchorConstant).isActive = true
+        accessoryIcon.heightAnchor.constraint(equalToConstant: VerticalSectionCellMetric.accessoryIconHeightAnchorConstant).isActive = true
 
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 10).isActive = true
+        title.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: VerticalSectionCellMetric.titleLeadingArchorConstant).isActive = true
         title.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         subTitle.translatesAutoresizingMaskIntoConstraints = false
-        subTitle.trailingAnchor.constraint(equalTo: accessoryIcon.leadingAnchor, constant: -10).isActive = true
+        subTitle.trailingAnchor.constraint(equalTo: accessoryIcon.leadingAnchor, constant: VerticalSectionCellMetric.subTitleTrailingArchorConstant).isActive = true
         subTitle.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         line.translatesAutoresizingMaskIntoConstraints = false
         line.leadingAnchor.constraint(equalTo: icon.trailingAnchor).isActive = true
         line.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        line.topAnchor.constraint(equalTo: bottomAnchor, constant: -1).isActive = true
-        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        line.topAnchor.constraint(equalTo: bottomAnchor, constant: VerticalSectionCellMetric.lineTopAnchorConstant).isActive = true
+        line.heightAnchor.constraint(equalToConstant: VerticalSectionCellMetric.lineHeightAnchorConstant).isActive = true
     }
+}
+
+// MARK: - Constants
+
+enum VerticalSectionCellMetric {
+    static let iconWidthAnchorConstant = 38.0
+    static let iconHeightAnchorConstant = 25.0
+    
+    static let accessoryIconTrailingAnchorConstant = -20.0
+    static let accessoryIconWidthAnchorConstant = 9.0
+    static let accessoryIconHeightAnchorConstant = 14.0
+    
+    static let titleLeadingArchorConstant = 10.0
+    static let titleFontSize = 22.0
+    
+    static let subTitleTrailingArchorConstant = -10.0
+    
+    static let lineTopAnchorConstant = -1.0
+    static let lineHeightAnchorConstant = 1.0
 }

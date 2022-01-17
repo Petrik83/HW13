@@ -38,24 +38,24 @@ class FirstSectionHeader: UICollectionReusableView {
     
     private func setupLayout() {
         line.translatesAutoresizingMaskIntoConstraints = false
-        line.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        line.leadingAnchor.constraint(equalTo: leadingAnchor, constant: FirstSectionHeaderMetric.lineLeadingArchorConstant).isActive = true
         line.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         line.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        line.heightAnchor.constraint(equalToConstant: FirstSectionHeaderMetric.lineHeightAnchorConstant).isActive = true
 
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20).isActive = true
-        title.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: FirstSectionHeaderMetric.titleLeadingArchorConstant).isActive = true
+        title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: FirstSectionHeaderMetric.titleCenterYAnchorConstant).isActive = true
+        title.heightAnchor.constraint(equalToConstant: FirstSectionHeaderMetric.titleHeightAnchorConstant).isActive = true
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        button.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 24).isActive = true
+        button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: FirstSectionHeaderMetric.buttonTrailingArchorConstant).isActive = true
+        button.centerYAnchor.constraint(equalTo: centerYAnchor, constant: FirstSectionHeaderMetric.buttonCenterYAnchorConstant).isActive = true
     }
     
     private func setupElements() {
         title.textColor = .black
-        title.font = UIFont.boldSystemFont(ofSize: 25)
+        title.font = UIFont.boldSystemFont(ofSize: FirstSectionHeaderMetric.titleFontSize)
         line.backgroundColor = .systemGray3
     }
     
@@ -64,3 +64,17 @@ class FirstSectionHeader: UICollectionReusableView {
     }
  }
 
+// MARK: - Constants
+
+enum FirstSectionHeaderMetric {
+    static let lineLeadingArchorConstant = 10.0
+    static let lineHeightAnchorConstant = 1.0
+    
+    static let titleLeadingArchorConstant = 10.0
+    static let titleCenterYAnchorConstant = 20.0
+    static let titleHeightAnchorConstant = 20.0
+    static let titleFontSize = 25.0
+    
+    static let buttonTrailingArchorConstant = -20.0
+    static let buttonCenterYAnchorConstant = 24.0
+}
