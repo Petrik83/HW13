@@ -74,20 +74,21 @@
 		6DB9102527725EE800B5C47B /* HW13 */ = {
 			isa = PBXGroup;
 			children = (
-				6DE39F9E2788EE6A00C6B370 /* Resurses */,
-				6DE39FA12788EF5500C6B370 /* Sourses */,
+				6DE39FA22788EF7800C6B370 /* Models */,
+				6DE39FA12788EF5500C6B370 /* Sources */,
+				6DE39F9E2788EE6A00C6B370 /* Resources */,
 			);
 			path = HW13;
 			sourceTree = "<group>";
 		};
-		6DE39F9E2788EE6A00C6B370 /* Resurses */ = {
+		6DE39F9E2788EE6A00C6B370 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				6DB9102F27725EE900B5C47B /* Assets.xcassets */,
 				6DE39F9F2788EE8C00C6B370 /* Configs */,
 				6DE39FA02788EE9B00C6B370 /* Storyboards */,
 			);
-			path = Resurses;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6DE39F9F2788EE8C00C6B370 /* Configs */ = {
@@ -107,14 +108,13 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		6DE39FA12788EF5500C6B370 /* Sourses */ = {
+		6DE39FA12788EF5500C6B370 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				6DE39FA42788EF9100C6B370 /* App */,
 				6DE39FA32788EF8400C6B370 /* Scenes */,
-				6DE39FA22788EF7800C6B370 /* Models */,
 			);
-			path = Sourses;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		6DE39FA22788EF7800C6B370 /* Models */ = {
@@ -415,7 +415,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZB4T6SD8SN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW13/Resurses/Configs/Info.plist;
+				INFOPLIST_FILE = HW13/Resources/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -443,7 +443,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZB4T6SD8SN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW13/Resurses/Configs/Info.plist;
+				INFOPLIST_FILE = HW13/Resources/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
