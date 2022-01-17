@@ -28,21 +28,21 @@ class SectionHeader: UICollectionReusableView {
     
     private func setupLayout() {
         line.translatesAutoresizingMaskIntoConstraints = false
-        line.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        line.leadingAnchor.constraint(equalTo: leadingAnchor, constant: SectionHeaderMetric.lineLeadingArchorConstant).isActive = true
         line.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         line.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        line.heightAnchor.constraint(equalToConstant: SectionHeaderMetric.lineHeightAnchorConstant).isActive = true
 
 
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20).isActive = true
-        title.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: SectionHeaderMetric.titleLeadingArchorConstant).isActive = true
+        title.centerYAnchor.constraint(equalTo: centerYAnchor, constant: SectionHeaderMetric.titleCenterYAnchorConstant).isActive = true
+        title.heightAnchor.constraint(equalToConstant: SectionHeaderMetric.titleHeightAnchorConstant).isActive = true
     }
     
     private func setupElements() {
         title.textColor = .black
-        title.font = UIFont.boldSystemFont(ofSize: 25)
+        title.font = UIFont.boldSystemFont(ofSize: SectionHeaderMetric.titleFontSize)
         
         line.backgroundColor = UIColor.systemGray3
     }
@@ -50,4 +50,16 @@ class SectionHeader: UICollectionReusableView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+// MARK: - Constants
+
+enum SectionHeaderMetric {
+    static let lineLeadingArchorConstant = 10.0
+    static let lineHeightAnchorConstant = 1.0
+    
+    static let titleLeadingArchorConstant = 10.0
+    static let titleCenterYAnchorConstant = 20.0
+    static let titleHeightAnchorConstant = 20.0
+    static let titleFontSize = 25.0
 }

@@ -168,10 +168,10 @@
 				6D77602727797BF900F605C9 /* ThirdTabViewController.swift */,
 				395772DB27959B7700AE5033 /* ThirdTabViewControllerDataSource.swift */,
 				395772DD27959B9300AE5033 /* ThirdTabViewControllerDelegat.swift */,
-				6DE39FAD2789841400C6B370 /* VerticalSectionCell.swift */,
 				6DE39FB1278B289400C6B370 /* HorizontalSectionCell.swift */,
-				6DE39FB3278B59B100C6B370 /* SectionHeader.swift */,
+				6DE39FAD2789841400C6B370 /* VerticalSectionCell.swift */,
 				6DE39FB7278CAAD000C6B370 /* FirstSectionHeader.swift */,
+				6DE39FB3278B59B100C6B370 /* SectionHeader.swift */,
 				6DE39FAB278983C000C6B370 /* SetupSections.swift */,
 			);
 			path = ThirdTabViewController;

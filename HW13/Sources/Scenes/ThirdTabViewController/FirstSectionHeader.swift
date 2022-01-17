@@ -64,3 +64,6 @@ class FirstSectionHeader: UICollectionReusableView {
     }
  }
 
+// MARK: - Constants
+
+enum SectionHeaderMetric {
