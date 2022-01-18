@@ -17,13 +17,6 @@ class FourthTabViewController: UIViewController {
         search.searchResultsUpdater = self
         self.navigationItem.searchController = search
     }
-    
-//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//    required init?(coder: NSCoder) {
-//        super.init(coder: coder)
-//    }
 }
 
 extension FourthTabViewController: UISearchResultsUpdating {
